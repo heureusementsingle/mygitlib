@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+	body{
+		width: 800px;
+		margin: 0 auto;
+	}
+	#content{
+		width: 600px;
+
+	}
+	</style>
+	<script src="book1.js"></script>
+</head>
+<body>
+	<div id="content">
+	</div>
+	<script>
+		// var content=document.getElementById('content');
+		// function createElement(dataObject){
+		// 	var blockDiv=document.createElement('div');
+		// 	var ImgDiv=document.createElement('div');
+		// 	var InforDiv=document.createElement('div');
+		// 	var myUL=document.createElement('ul');
+		// 	var o=document.createElement('li');
+		// 	var mySpan=document.createElement('span');
+		// 	var imgs=document.createElement('img');
+		// 	var o1=null;
+		// 	var o2=null;
+		// 	o.appendChild(mySpan);
+		// 	o1=o.cloneNode(true);
+		// 	o2=o.cloneNode(true);
+			
+		// 	blockDiv.appendChild(ImgDiv);
+		// 	blockDiv.appendChild(InforDiv);
+		// 	InforDiv.appendChild(myUL);
+		// 	ImgDiv.appendChild(imgs);
+		// 	myUL.appendChild(o);
+		// 	myUL.appendChild(o1);
+		// 	myUL.appendChild(o2)
+		// 	imgs.src=dataObject.pic;
+		// 	o.firstChild.innerHTML=dataObject.bookname;
+		// 	o1.firstChild.innerHTML=dataObject.author;
+		// 	o2.firstChild.innerHTML=dataObject.price;
+
+		// 	for(var i=0;i<datas.length;i++){
+		// 		imgs.addEventListener('mouseover',function(){
+		// 			console.log(dataObject.bookname+'  '+dataObject.author);
+		// 		})
+		// 	}
+		// 	return blockDiv;
+		// }
+		// for(var i=0;i<datas.length;i++){
+		// 	var o=createElement(datas[i]);
+		// 	content.appendChild(o);
+		// }
+		var content=document.getElementById('content');
+		for(var i=0;i<datas.length;i++){
+			var blockDiv=document.createElement('div');
+			var ImgDiv=document.createElement('div');
+			var InforDiv=document.createElement('div');
+			var myUL=document.createElement('ul');
+			var o=document.createElement('li');
+			var mySpan=document.createElement('span');
+			var imgs=document.createElement('img');
+			var o1=null;
+			var o2=null;
+			o.appendChild(mySpan);
+			o1=o.cloneNode(true);
+			o2=o.cloneNode(true);
+			
+			blockDiv.appendChild(ImgDiv);
+			blockDiv.appendChild(InforDiv);
+			InforDiv.appendChild(myUL);
+			ImgDiv.appendChild(imgs);
+			myUL.appendChild(o);
+			myUL.appendChild(o1);
+			myUL.appendChild(o2);
+			content.appendChild(blockDiv);
+			imgs.src=datas[i].pic;
+			o.firstChild.innerHTML=datas[i].bookname;
+			o1.firstChild.innerHTML=datas[i].author;
+			o2.firstChild.innerHTML=datas[i].price;
+
+
+			(!function(book){
+				imgs.addEventListener('mouseover',function(){
+					console.log(book.bookname+'  '+book.author);
+				})
+			}(datas[i]))
+		}
+	</script>
+	
+</body>
+</html>

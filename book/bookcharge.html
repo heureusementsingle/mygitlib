@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>后台图书管理</title>
+	<style type="text/css">
+	@import url("book.css");
+	</style>
+</head>
+<body>
+	<!--登录！-->
+	<div id="shadow"></div><!--登录页面的模态化窗口!-->
+	<div id="bg"></div><!--表单的模态化窗口!-->
+	<div id="register">	
+		<div id="dashedBorder">
+			<span>登录</span>
+			<div><img src="images/bookimg.gif" width="180px" height="100px"></div>
+			<div id="informations">
+				用户名 <input type="text" index='username' class="reInput"></br>
+				密码 <input type="password" index='password' class="reInput">
+			</div>
+			<div>
+				<button id="DEL">登录</button>
+				<button>退出</button>
+			</div>
+		</div>
+	</div>
+	<div>
+		<button id="addData">添加数据</button>
+		<table id="seTable">
+			<thead>
+				<tr>
+					<td><input type="checkbox" id="allSelect">全选</td>
+					<td>图片</td>
+					<td>书名</td>
+					<td>作者</td>
+					<td id="order">价格</td>
+					<td>操作</td>	
+				</tr>
+			</thead>
+			<tbody></tbody>
+		</table>
+	</div>
+	<div id="floatDiv"><button>删除</button></br>
+	<button>取消</button></div>
+	<div id="Datas">
+		<div id="hidden"><span>添加新数据</span><a href="#" id="naver">X</a></div>
+		<div id="dataForm">
+			<form action="" id="myForm">
+				<div id="left">
+					书名 <input type="text" name="bookname" class="fin"></br>
+					副标题 <input type="text" name="fTitle" class="fin"></br>
+					价格 <input type="text" name="price" class="fin"></br>
+					会员价 <input type="text" name="hyPrice" class="fin"></br>
+					校园价<input type="text" name="xyPrice" class="fin"></br>
+					评分 <input type="text" name="pf" class="fin"></br>
+					作者 <input type='text' name="author" class="fin"></br>
+					出版社 <input type="text" name="publisher" class="fin"></br>
+				</div>
+				<div id="right">
+					ISBN <input type='text' name="isbn" class="fin"></br>
+					上架时间 <input type="text" name="sjDate" class="fin"></br>
+					出版时间 <input type="text" name="pubDate" class="fin"></br>
+					开本 <input type="text" name="kb" class="fin"></br>
+					页码 <input type="text" name="page" class="fin"></br>
+					版本 <input type="text" name="version" class="fin"></br>
+					分类 <input type="text" name="category" class="fin"></br>
+					图片 <input type="text" name="pic" class="fin"></br>
+					<button id="addBook">添加</button><button id="reload">更新</button>
+				</div>
+			</form>
+		</div>	
+	</div>
+	<script src="bookcharge.js"></script>
+</body>
+</html>
